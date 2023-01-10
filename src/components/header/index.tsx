@@ -28,7 +28,7 @@ function Header() {
             <div className="col-lg-3 col-md-3 col-sm-3 col-xs-8">
               <div className="logo">
                 <a href="index.html">
-                  <img src="images/logo.png" alt="" />{' '}
+                  <img src="images/logo.png" alt="" />
                 </a>
               </div>
             </div>
