@@ -567,12 +567,12 @@ img { width: auto; max-width: 100%; height: auto; margin: 0; padding: 0; border:
 .product-carousel .owl-theme .owl-nav .owl-prev:hover { background-color: transparent; text-decoration: none; color: #fb730f; }
 .product-carousel .owl-theme .owl-nav .owl-next:hover { background-color: transparent; text-decoration: none; color: #fb730f; }
 .product-block strong { color: #848687; }
-.newsletter-wrapper { background: url(../images/cta_wrapper.jpg) no-repeat; min-height: 220px; margin-bottom: 30px; position: relative; }
+.newsletter-wrapper { background: url(/assets/images/asset29.jpeg) no-repeat; min-height: 220px; margin-bottom: 30px; position: relative; }
 .newsletter-form { position: absolute; top: 45px; }
 .newsletter-form .form-control { background-color: #fff; height: 58px; position: relative; border:transparent; }
 .newsletter-form button { }
 .newsletter-form button.btn { border-top-left-radius: 0px; border-bottom-left-radius: 0px; }
-.newsletter-title { margin-top: 5px font-size:30px; }
+.newsletter-title { margin-top: 5px; font-size:30px; }
 
 /*-------------------------
  9.2 Product Single
