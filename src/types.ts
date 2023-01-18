@@ -6,3 +6,7 @@ export type Category = {
   slug: string;
   description: string;
 };
+
+function onFormSubmit(event: Event) {
+  event.preventDefault();
+}
