@@ -10,7 +10,7 @@ function Header() {
   return (
     <>
       <div>
-        <div className="top-header">
+        <div className="top-header ">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 col-md-7 col-sm-6 hidden-xs">
@@ -80,7 +80,10 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="navigation" style={{ marginTop: '-20px' }}>
+      <div
+        className="navigation"
+        style={{ marginTop: '-20px', marginBottom: '40px' }}
+      >
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">

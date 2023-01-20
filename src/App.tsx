@@ -3,6 +3,10 @@ import HomePage from './pages/home-page/index';
 import { RootState } from './redux/store';
 import useApi from './hooks/useApi';
 import { setCategories } from './redux/categorySlice';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Footer from './components/footer/index';
+import Header from './components/header/index';
+import CategoryDetailsPage from './pages/category-details-page';
 
 function App() {
   const categoryState = useSelector((state: RootState) => state.category);
@@ -19,7 +23,19 @@ function App() {
   }
   return (
     <div className="App">
-      <HomePage />
+      <BrowserRouter>
+        <Header />
+
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route
+            path="/category-details/:code"
+            element={<CategoryDetailsPage />}
+          />
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

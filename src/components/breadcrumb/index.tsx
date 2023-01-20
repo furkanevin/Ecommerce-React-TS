@@ -1,6 +1,12 @@
 import React from 'react';
+export type BreadcrumbItemsType = {
+  url: string;
+  items: string;
+};
 
-export type BreadcrumbPropsType = {};
+export type BreadcrumbPropsType = {
+  items: BreadcrumbItemsType[];
+};
 function Breadcrumb(props: BreadcrumbPropsType) {
   return (
     <div className="page-header">
@@ -9,13 +15,13 @@ function Breadcrumb(props: BreadcrumbPropsType) {
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div className="page-breadcrumb">
               <ol className="breadcrumb">
-                {props.items.map((item, index) => {
+                {/* {props.items.map((item, index) => {
                   return (
                     <li key={index}>
                       <a href={item.href}>{item.title}</a>
                     </li>
                   );
-                })}
+                })} */}
               </ol>
             </div>
           </div>

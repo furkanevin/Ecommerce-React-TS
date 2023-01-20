@@ -1,12 +1,9 @@
-import Header from './../../components/header/index';
-import Footer from './../../components/footer/index';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+
 function HomePage() {
   return (
     <>
-      <Header />
-
       <Splide
         options={{
           type: 'loop',
@@ -680,7 +677,6 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
