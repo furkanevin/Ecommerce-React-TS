@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/footer/index';
 import Header from './components/header/index';
 import CategoryDetailsPage from './pages/category-details-page';
+import ProductDetailsPage from './pages/product-details-page/index';
 
 function App() {
   const categoryState = useSelector((state: RootState) => state.category);
@@ -31,6 +32,10 @@ function App() {
           <Route
             path="/category-details/:code"
             element={<CategoryDetailsPage />}
+          />
+          <Route
+            path="/product-details/:code"
+            element={<ProductDetailsPage />}
           />
         </Routes>
 

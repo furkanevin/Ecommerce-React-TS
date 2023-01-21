@@ -1,19 +1,19 @@
 import { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import Breadcrumb from '../../components/breadcrumb';
-import { ProductType } from '../../types';
+import { ProductType, RouteCodeParamsType } from '../../types';
 import useApi from './../../hooks/useApi';
 
-export type CategoryDetailsParmasType = {
-  code: string;
-};
+export type AscDescOrderType = 'asc' | 'desc';
 
 function CategoryDetailsPage() {
-  const routeParams = useParams<CategoryDetailsParmasType>();
+  const routeParams = useParams<RouteCodeParamsType>();
   const api = useApi();
   const [initialized, setInitialized] = useState<boolean>(false);
   const [products, setProducts] = useState<ProductType[]>([]);
+  const navigate = useNavigate();
+
   console.log(products);
   if (initialized === false) {
     const params = {
@@ -35,6 +35,16 @@ function CategoryDetailsPage() {
 
   return (
     <>
+      <Breadcrumb
+        items={[
+          { url: '/', title: 'Home' },
+          { url: '/category', title: 'Category' },
+          {
+            url: '/category-details/' + routeParams.code,
+            title: routeParams.code as string,
+          },
+        ]}
+      />
       <div className="content">
         <div className="container">
           <div className="row">
@@ -43,7 +53,7 @@ function CategoryDetailsPage() {
                 <ul>
                   <li className="has-sub active">
                     <a>CATEGORY</a>
-                    <ul>
+                    <ul style={{ display: 'block' }}>
                       <li>
                         <a href="#">Smart Phones</a>
                       </li>
@@ -85,9 +95,12 @@ function CategoryDetailsPage() {
                       </div>
                       <div className="product-content">
                         <h5>
-                          <a href="#" className="product-title">
+                          <Link
+                            to={`/product-details/${product.code}`}
+                            className="product-title"
+                          >
                             {product?.name}
-                          </a>
+                          </Link>
                         </h5>
                         <div className="product-meta">
                           <a href="#" className="product-price">

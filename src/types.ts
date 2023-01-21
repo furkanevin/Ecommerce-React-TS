@@ -29,3 +29,7 @@ export type ProductType = {
   description: string;
   slug: string;
 };
+
+export type RouteCodeParamsType = {
+  code: string;
+};
