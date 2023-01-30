@@ -16,11 +16,15 @@ function Breadcrumb(props: BreadcrumbPropsType) {
               <div className="page-breadcrumb">
                 <ol className="breadcrumb">
                   {props.items.map((item, index) => {
-                    return (
-                      <li key={index}>
-                        <a href={item.url}>{item.title}</a>
-                      </li>
-                    );
+                    if (index < 2) {
+                      return (
+                        <li>
+                          <a href={item.url}>{item.title}</a>
+                        </li>
+                      );
+                    } else {
+                      return <li>{item.title}</li>;
+                    }
                   })}
                 </ol>
               </div>

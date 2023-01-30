@@ -28,13 +28,11 @@ function HomePage() {
               <div className="showcase-block">
                 <div className="display-logo ">
                   <a href="#">
-                    {' '}
                     <img src="assets/images/asset 7.png" alt="" />
                   </a>
                 </div>
                 <div className="showcase-img">
                   <a href="#">
-                    {' '}
                     <img src="assets/images/asset 8.png" alt="" />
                   </a>
                 </div>

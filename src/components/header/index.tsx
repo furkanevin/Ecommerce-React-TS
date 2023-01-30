@@ -102,7 +102,7 @@ function Header() {
                         (category: Category, index) => {
                           return (
                             <li key={index}>
-                              <a href={`category-details/${category.code}`}>
+                              <a href={`/category-details/${category.code}`}>
                                 {category.name}
                               </a>
                             </li>
